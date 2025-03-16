@@ -47,6 +47,9 @@
             color: white;
             text-align: center;
             padding: 15px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
         }
         .map-container {
             width: 100%;
@@ -61,6 +64,28 @@
         }
         .map-container:hover {
             transform: scale(1.1); /* Enlarge the map when hovered */
+        }
+        .newsletter-form {
+            max-width: 600px;
+            margin: 30px auto;
+            text-align: center;
+        }
+        .newsletter-form input {
+            width: 70%;
+            padding: 10px;
+            margin: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .newsletter-form button {
+            padding: 10px 20px;
+            background-color: #ff6f61;
+            color: white;
+            border: none;
+            border-radius: 4px;
+        }
+        .newsletter-form button:hover {
+            background-color: #ffcc00;
         }
     </style>
 </head>
@@ -121,10 +146,30 @@
             width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
         </iframe>
     </div>
+
+    <!-- Newsletter Signup Section -->
+    <div class="newsletter-form">
+        <h4>Subscribe to Our Newsletter</h4>
+        <p>Stay updated with the latest news, updates, and product releases.</p>
+        <form>
+            <input type="email" id="newsletterEmail" placeholder="Enter your email" required>
+            <button type="submit">Subscribe</button>
+        </form>
+    </div>
 </div>
 
+<!-- Footer -->
 <footer>
     <p>&copy; 2025 UNITED INTEGRATED SOFTWARE SOLUTIONS PVT LTD. All rights reserved.</p>
+    <ul class="list-inline">
+        <li class="list-inline-item"><a href="index.html" class="text-white">Home</a></li>
+        <li class="list-inline-item"><a href="about.html" class="text-white">About Us</a></li>
+        <li class="list-inline-item"><a href="portfolio.html" class="text-white">Portfolio</a></li>
+        <li class="list-inline-item"><a href="technologies.html" class="text-white">Technologies</a></li>
+        <li class="list-inline-item"><a href="blog.html" class="text-white">Blog</a></li>
+        <li class="list-inline-item"><a href="careers.html" class="text-white">Careers</a></li>
+        <li class="list-inline-item"><a href="contact.html" class="text-white">Contact</a></li>
+    </ul>
 </footer>
 
 <!-- JavaScript Libraries -->
