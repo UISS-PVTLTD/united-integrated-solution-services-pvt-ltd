@@ -93,10 +93,26 @@
             background-color: #fff;
         }
 
-        .services h2 {
-            font-size: 2.5rem;
+        .service-title {
             text-align: center;
-            margin-bottom: 40px;
+            margin: 40px 0;
+            font-size: 2rem;
+            color: #ff6f61;
+        }
+
+        .service-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: none;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .card-img-top {
+            height: 200px;
+            object-fit: cover;
         }
 
         .services .row {
@@ -212,23 +228,29 @@
     </div>
 
     <section class="services">
-        <div class="container text-center">
-            <h2>Our Services</h2>
+        <div class="container">
+            <h2 class="service-title">Our Services</h2>
             <div class="row">
                 <div class="col-md-4">
-                    <img src="assets/images/icons/service1.png" alt="Service 1">
-                    <h3>Custom Software Development</h3>
-                    <p>Tailored solutions to meet your business needs.</p>
+                    <div class="service-card">
+                        <img src="assets/images/icons/service1.png" alt="Custom Software Development" class="card-img-top">
+                        <h3>Custom Software Development</h3>
+                        <p>Tailored solutions to meet your business needs.</p>
+                    </div>
                 </div>
                 <div class="col-md-4">
-                    <img src="assets/images/icons/service2.png" alt="Service 2">
-                    <h3>Cloud Solutions</h3>
-                    <p>Secure and scalable cloud-based services.</p>
+                    <div class="service-card">
+                        <img src="assets/images/icons/service2.png" alt="Cloud Solutions" class="card-img-top">
+                        <h3>Cloud Solutions</h3>
+                        <p>Secure and scalable cloud-based services.</p>
+                    </div>
                 </div>
                 <div class="col-md-4">
-                    <img src="assets/images/icons/service3.png" alt="Service 3">
-                    <h3>IT Consultancy</h3>
-                    <p>Expert advice to optimize your IT infrastructure.</p>
+                    <div class="service-card">
+                        <img src="assets/images/icons/service3.png" alt="IT Consultancy" class="card-img-top">
+                        <h3>IT Consultancy</h3>
+                        <p>Expert advice to optimize your IT infrastructure.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -251,14 +273,14 @@
             <a href="https://facebook.com/yourpage" target="_blank"><i class="fab fa-facebook"></i></a>
             <a href="https://twitter.com/yourprofile" target="_blank"><i class="fab fa-twitter"></i></a>
             <a href="https://linkedin.com/in/yourprofile" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://instagram.com/yourprofile" target="_blank"><i class="fab fa-instagram"></i></a>
         </div>
-        <p>&copy; 2023 UNITED INTEGRATED SOFTWARE SOLUTIONS PVT LTD. All rights reserved.</p>
+        <p>&copy; 2025 United Integrated Software Solutions Pvt Ltd. All Rights Reserved.</p>
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
 </body>
 
 </html>
