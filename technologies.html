@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | UNITED INTEGRATED SOFTWARE SOLUTIONS PVT LTD</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="static/css/styles.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        header {
+            background-color: #ff6f61;
+            color: white;
+            padding: 20px 0;
+        }
+
+        .navbar {
+            background-color: #333;
+        }
+
+        .navbar a {
+            color: white;
+        }
+
+        .navbar a:hover {
+            color: #ffcc00;
+        }
+
+        .navbar-brand img {
+            width: 180px;
+            height: auto;
+        }
+
+        .hero-section {
+            position: relative;
+            height: 450px;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #000;
+        }
+
+        .hero-section video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(50%);
+        }
+
+        .hero-section .content {
+            position: relative;
+            color: white;
+            text-align: center;
+            z-index: 1;
+        }
+
+        .hero-section h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .hero-section p {
+            font-size: 1.2rem;
+            font-weight: 300;
+        }
+
+        .technologies-section {
+            padding: 50px 0;
+            background-color: #fafafa;
+            text-align: center;
+        }
+
+        .technologies-section h2 {
+            font-size: 2.5rem;
+            color: #ff6f61;
+            margin-bottom: 30px;
+        }
+
+        .technologies-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .technology-card {
+            background-color: #fff;
+            margin: 15px;
+            padding: 20px;
+            width: 250px;
+            height: 250px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .technology-card:hover {
+            transform: scale(1.05);
+        }
+
+        .technology-card img {
+            width: 50%;
+            margin-bottom: 15px;
+        }
+
+        .technology-card h4 {
+            font-size: 1.5rem;
+            color: #333;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        @media (max-width: 767px) {
+            .hero-section h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-section p {
+                font-size: 1rem;
+            }
+
+            .technologies-list {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .technology-card {
+                width: 80%;
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="index.html">
+            <img src="static/images/logo.png" alt="Company Logo" style="width: 100px; height: auto;">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+                <li class="nav-item"><a class="nav-link" href="technologies.html">Technologies</a></li>
+                <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                <li class="nav-item"><a class="nav-link" href="careers.html">Careers</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<div class="technologies-section">
+    <h2>Technologies We Work With</h2>
+    <div class="technologies-list">
+        <div class="technology-card">
+            <img src="https://via.placeholder.com/100" alt="Technology 1">
+            <h4>Technology 1</h4>
+            <p>Short description of the technology we use.</p>
+        </div>
+        <div class="technology-card">
+            <img src="https://via.placeholder.com/100" alt="Technology 2">
+            <h4>Technology 2</h4>
+            <p>Short description of the technology we use.</p>
+        </div>
+        <div class="technology-card">
+            <img src="https://via.placeholder.com/100" alt="Technology 3">
+            <h4>Technology 3</h4>
+            <p>Short description of the technology we use.</p>
+        </div>
+        <div class="technology-card">
+            <img src="https://via.placeholder.com/100" alt="Technology 4">
+            <h4>Technology 4</h4>
+            <p>Short description of the technology we use.</p>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2019 UNITED INTEGRATED SOFTWARE SOLUTIONS PVT LTD. All rights reserved.</p>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
