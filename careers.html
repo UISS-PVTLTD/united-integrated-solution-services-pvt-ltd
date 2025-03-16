@@ -103,7 +103,6 @@
         <p>We are looking for a creative UI/UX Designer.</p>
         <button data-toggle="modal" data-target="#applyModal">Apply Now</button>
     </div>
-
 </div>
 
 <!-- Modal -->
@@ -115,22 +114,10 @@
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
             </div>
             <div class="modal-body">
-                <form action="https://formspree.io/f/example" method="POST">
-                    <div class="form-group">
-                        <label for="name">Full Name</label>
-                        <input type="text" class="form-control" id="name" name="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" class="form-control" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="resume">Upload Resume (Email Submission Only)</label>
-                        <input type="file" class="form-control" id="resume" disabled>
-                        <small class="text-danger">File upload is disabled on GitHub Pages. Please email us your resume.</small>
-                    </div>
-                    <button type="submit" class="btn btn-success">Submit Application</button>
-                </form>
+                <!-- Use Google Forms for Applications -->
+                <p>Please submit your application via our Google Form:</p>
+                <a href="https://forms.gle/your-google-form-link" class="btn btn-success" target="_blank">Apply Now</a>
+                <p class="text-muted mt-2">Alternatively, you can email your resume to <strong>careers@yourcompany.com</strong></p>
             </div>
         </div>
     </div>
