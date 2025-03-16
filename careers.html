@@ -42,39 +42,28 @@
             margin: auto;
         }
         .job-listing {
-            margin-bottom: 20px;
+            margin-bottom: 30px;
             background-color: #fff;
-            padding: 15px;
+            padding: 20px;
             border-radius: 8px;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-            cursor: pointer;
-            transition: 0.3s;
-        }
-        .job-listing:hover {
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
         }
         .job-listing h2 {
             color: #333;
-            font-size: 1.4rem;
-            margin-bottom: 10px;
         }
-        .job-details {
-            display: none;
-            font-size: 1rem;
+        .job-listing p {
+            font-size: 1.1rem;
             color: #555;
-            margin-top: 10px;
         }
-        .apply-btn {
+        .job-listing button {
             background-color: #ff5722;
             color: white;
             border: none;
-            padding: 10px;
+            padding: 10px 15px;
             border-radius: 5px;
             cursor: pointer;
-            margin-top: 10px;
-            display: inline-block;
         }
-        .apply-btn:hover {
+        .job-listing button:hover {
             background-color: #e64a19;
         }
         footer {
@@ -117,7 +106,19 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                
+                <!-- About Us Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        About Us
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="aboutDropdown">
+                        <a class="dropdown-item" href="about.html">Our Story</a>
+                        <a class="dropdown-item" href="team.html">Our Team</a>
+                        <a class="dropdown-item" href="mission.html">Our Mission</a>
+                    </div>
+                </li>
+
                 <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
                 <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
                 <li class="nav-item"><a class="nav-link" href="technologies.html">Technologies</a></li>
@@ -132,30 +133,16 @@
 <div class="careers-section">
     <h1>Careers at UNITED INTEGRATED SOFTWARE SOLUTIONS</h1>
 
-    <div class="job-listing" onclick="toggleDetails('dev-details')">
+    <div class="job-listing">
         <h2>Software Developer</h2>
-        <div class="job-details" id="dev-details">
-            <p>Responsibilities:</p>
-            <ul>
-                <li>Develop high-quality software solutions.</li>
-                <li>Collaborate with cross-functional teams.</li>
-                <li>Ensure code quality and performance.</li>
-            </ul>
-            <button class="apply-btn" data-toggle="modal" data-target="#applyModal">Apply Now</button>
-        </div>
+        <p>We are looking for a skilled software developer to join our team.</p>
+        <button data-toggle="modal" data-target="#applyModal">Apply Now</button>
     </div>
 
-    <div class="job-listing" onclick="toggleDetails('ux-details')">
+    <div class="job-listing">
         <h2>UI/UX Designer</h2>
-        <div class="job-details" id="ux-details">
-            <p>Responsibilities:</p>
-            <ul>
-                <li>Create user-friendly interface designs.</li>
-                <li>Work with development teams for implementation.</li>
-                <li>Ensure seamless user experiences.</li>
-            </ul>
-            <button class="apply-btn" data-toggle="modal" data-target="#applyModal">Apply Now</button>
-        </div>
+        <p>We are looking for a creative UI/UX Designer.</p>
+        <button data-toggle="modal" data-target="#applyModal">Apply Now</button>
     </div>
 </div>
 
@@ -186,12 +173,18 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 <script>
+    // Update footer year dynamically
     document.getElementById("currentYear").textContent = new Date().getFullYear();
 
-    function toggleDetails(id) {
-        let details = document.getElementById(id);
-        details.style.display = (details.style.display === "block") ? "none" : "block";
-    }
+    // Fix GitHub Pages 404 issue (Automatically add repo name in URL)
+    document.addEventListener("DOMContentLoaded", function () {
+        let repoName = window.location.pathname.split("/")[1]; // Get repository name
+        document.querySelectorAll("a.nav-link").forEach(link => {
+            if (!link.href.includes("http")) {
+                link.href = "/" + repoName + "/" + link.getAttribute("href");
+            }
+        });
+    });
 </script>
 
 </body>
