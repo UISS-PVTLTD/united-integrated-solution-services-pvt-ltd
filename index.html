@@ -7,7 +7,7 @@
     <meta name="keywords" content="IoT, Robotics, Classes, Training, Technology, AI">
     <meta name="author" content="UNITED INTEGRATED SOFTWARE SOLUTIONS PVT LTD">
     
-    <title>Our Services | UNITED INTEGRATED SOFTWARE SOLUTIONS PVT LTD</title>
+    <title>Home | UNITED INTEGRATED SOFTWARE SOLUTIONS PVT LTD</title>
     
     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
@@ -16,17 +16,30 @@
     <style>
         body {
             font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
         }
-        
-        /* Header Styling */
+
+        /* Header Section with Video Background */
         header {
-            background-color: #ff6f61;
-            color: white;
-            padding: 20px 0;
+            position: relative;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        header video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
         }
 
         .navbar {
-            background-color: #333;
+            background-color: rgba(0, 0, 0, 0.7);
         }
 
         .navbar a {
@@ -36,6 +49,42 @@
 
         .navbar a:hover {
             color: #ffcc00;
+        }
+
+        /* Home Section */
+        .home-title {
+            text-align: center;
+            margin: 60px 0;
+            font-size: 2.5rem;
+            color: #ff6f61;
+            z-index: 1;
+            position: relative;
+        }
+
+        .home-description {
+            text-align: center;
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            z-index: 1;
+            position: relative;
+        }
+
+        .home-button {
+            display: block;
+            margin: 0 auto;
+            padding: 10px 20px;
+            background-color: #ff6f61;
+            color: white;
+            border: none;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            z-index: 1;
+            position: relative;
+        }
+
+        .home-button:hover {
+            background-color: #ffcc00;
         }
 
         /* Service Section */
@@ -80,6 +129,10 @@
 <body>
 
 <header>
+    <video autoplay muted loop id="background-video">
+        <source src="assets/videos/background-video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
     <nav class="navbar navbar-expand-lg navbar-dark">
         <!-- Logo -->
         <a class="navbar-brand" href="/">
@@ -103,6 +156,14 @@
     </nav>
 </header>
 
+<!-- Home Page Content -->
+<div class="container">
+    <div class="home-title">Welcome to UNITED INTEGRATED SOFTWARE SOLUTIONS</div>
+    <p class="home-description">We offer world-class IoT and Robotics training, helping individuals and businesses innovate in the fields of technology and AI. Join our courses to explore hands-on learning and cutting-edge solutions.</p>
+    <button class="home-button">Learn More</button>
+</div>
+
+<!-- Services Section -->
 <div class="container">
     <div class="service-title">Our Services: IoT & Robotics Classes</div>
     <div class="row">
@@ -135,39 +196,6 @@
                 <div class="card-body">
                     <h5 class="card-title">AI for Robotics</h5>
                     <p class="card-text">Explore AI applications in robotics and build intelligent autonomous systems.</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Service 4: Advanced IoT Projects -->
-        <div class="col-md-4 mb-4">
-            <div class="card service-card">
-                <img src="assets/images/advanced-iot.jpg" class="card-img-top" alt="Advanced IoT Projects">
-                <div class="card-body">
-                    <h5 class="card-title">Advanced IoT Projects</h5>
-                    <p class="card-text">Dive into more complex IoT projects, integrating various technologies to build innovative solutions.</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Service 5: Robotics Automation -->
-        <div class="col-md-4 mb-4">
-            <div class="card service-card">
-                <img src="assets/images/robotics-automation.jpg" class="card-img-top" alt="Robotics Automation">
-                <div class="card-body">
-                    <h5 class="card-title">Robotics Automation</h5>
-                    <p class="card-text">Learn how to create robotic systems that can perform tasks autonomously with minimal human intervention.</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Service 6: AI & Machine Learning in Robotics -->
-        <div class="col-md-4 mb-4">
-            <div class="card service-card">
-                <img src="assets/images/ai-ml-robotics.jpg" class="card-img-top" alt="AI & Machine Learning in Robotics">
-                <div class="card-body">
-                    <h5 class="card-title">AI & Machine Learning in Robotics</h5>
-                    <p class="card-text">Explore how machine learning techniques can be applied to robotics for smarter and more efficient systems.</p>
                 </div>
             </div>
         </div>
