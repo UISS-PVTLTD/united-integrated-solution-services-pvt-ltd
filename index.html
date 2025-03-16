@@ -88,34 +88,52 @@
             margin: 0;
         }
 
+        .service-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-align: center;
+            margin: 60px 0;
+            color: #333;
+        }
+
         .services {
             padding: 60px 0;
             background-color: #fff;
         }
 
-        .services h2 {
-            font-size: 2.5rem;
-            text-align: center;
-            margin-bottom: 40px;
-        }
-
-        .services .row {
+        .row {
             margin-top: 30px;
         }
 
-        .services .col-md-4 {
-            text-align: center;
+        .service-card {
+            border: 2px solid #ff6f61;
+            border-radius: 10px;
+            transition: transform 0.3s ease-in-out;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
-        .services img {
-            width: 60px;
-            height: 60px;
+        .service-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
         }
 
-        .services h3 {
-            margin-top: 20px;
-            font-size: 1.5rem;
-            color: #333;
+        .service-card img {
+            border-bottom: 2px solid #ff6f61;
+        }
+
+        .service-card .card-body {
+            padding: 20px;
+        }
+
+        .service-card .card-title {
+            font-size: 1.75rem;
+            font-weight: 600;
+            color: #ff6f61;
+        }
+
+        .service-card .card-text {
+            font-size: 1rem;
+            color: #555;
         }
 
         .contact-form {
@@ -212,43 +230,42 @@
     </div>
 
     <div class="container">
-    <div class="service-title">Our Services: IoT & Robotics Classes</div>
-    <div class="row">
-        <!-- Service 1: IoT Basics -->
-        <div class="col-md-4 mb-4">
-            <div class="card service-card">
-                <img src="assets/images/iot-basics.jpg" class="card-img-top" alt="IoT Basics">
-                <div class="card-body">
-                    <h5 class="card-title">IoT Basics</h5>
-                    <p class="card-text">Learn the fundamentals of IoT and how it’s transforming industries worldwide.</p>
+        <div class="service-title">Our Services: IoT & Robotics Classes</div>
+        <div class="row">
+            <!-- Service 1: IoT Basics -->
+            <div class="col-md-4 mb-4">
+                <div class="card service-card">
+                    <img src="assets/images/iot-basics.jpg" class="card-img-top" alt="IoT Basics">
+                    <div class="card-body">
+                        <h5 class="card-title">IoT Basics</h5>
+                        <p class="card-text">Learn the fundamentals of IoT and how it’s transforming industries worldwide.</p>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <!-- Service 2: Robotics Programming -->
-        <div class="col-md-4 mb-4">
-            <div class="card service-card">
-                <img src="assets/images/robotics-programming.jpg" class="card-img-top" alt="Robotics Programming">
-                
-                <div class="card-body">
-                    <h5 class="card-title">Robotics Programming</h5>
-                    <p class="card-text">Master robotics programming and control robotic systems using advanced technologies.</p>
+            <!-- Service 2: Robotics Programming -->
+            <div class="col-md-4 mb-4">
+                <div class="card service-card">
+                    <img src="assets/images/robotics-programming.jpg" class="card-img-top" alt="Robotics Programming">
+                    <div class="card-body">
+                        <h5 class="card-title">Robotics Programming</h5>
+                        <p class="card-text">Master robotics programming and control robotic systems using advanced technologies.</p>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <!-- Service 3: AI for Robotics -->
-        <div class="col-md-4 mb-4">
-            <div class="card service-card">
-                <img src="assets/images/ai-for-robotics.jpg" class="card-img-top" alt="AI for Robotics">
-                <div class="card-body">
-                    <h5 class="card-title">AI for Robotics</h5>
-                    <p class="card-text">Explore AI applications in robotics and build intelligent autonomous systems.</p>
+            <!-- Service 3: AI for Robotics -->
+            <div class="col-md-4 mb-4">
+                <div class="card service-card">
+                    <img src="assets/images/ai-for-robotics.jpg" class="card-img-top" alt="AI for Robotics">
+                    <div class="card-body">
+                        <h5 class="card-title">AI for Robotics</h5>
+                        <p class="card-text">Explore AI applications in robotics and build intelligent autonomous systems.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 
     <footer>
         <div class="social-links">
