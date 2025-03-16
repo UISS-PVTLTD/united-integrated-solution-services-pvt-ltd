@@ -3,15 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Careers | UNITED INTEGRATED SOFTWARE SOLUTIONS</title>
-    
-    <!-- Bootstrap CSS -->
+    <title>Careers | UNITED INTEGRATED SOFTWARE SOLUTIONS PVT LTD</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    
+    <link rel="stylesheet" href="static/css/styles.css">
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
             background-color: #f5f5f5;
+        }
+
+        header {
+            background-color: #ff6f61;
+            color: white;
+            padding: 20px 0;
         }
 
         .navbar {
@@ -31,11 +37,20 @@
         }
 
         .job-listing {
+            margin-bottom: 30px;
             background-color: #fff;
             padding: 20px;
-            margin-bottom: 20px;
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .job-listing h2 {
+            color: #333;
+        }
+
+        .job-listing p {
+            font-size: 1.1rem;
+            color: #555;
         }
 
         .job-listing button {
@@ -43,12 +58,12 @@
             color: white;
             border: none;
             padding: 10px;
+            border-radius: 5px;
             cursor: pointer;
-            transition: 0.3s;
         }
 
         .job-listing button:hover {
-            background-color: #c4410e;
+            background-color: #e64a19;
         }
 
         .modal-content {
@@ -59,16 +74,26 @@
             background-color: #333;
             color: white;
             text-align: center;
-            padding: 15px;
+            padding: 15px 0;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        .navbar-brand img {
+            width: 100px;
+            height: auto;
         }
     </style>
 </head>
 <body>
 
-<!-- Navbar -->
 <header>
     <nav class="navbar navbar-expand-lg navbar-dark">
-        <a class="navbar-brand" href="index.html">United Integrated Software Solutions</a>
+        <a class="navbar-brand" href="index.html">
+            <img src="static/images/logo.png" alt="Company Logo">
+        </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -80,82 +105,68 @@
                 <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
                 <li class="nav-item"><a class="nav-link" href="technologies.html">Technologies</a></li>
                 <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-                <li class="nav-item"><a class="nav-link active" href="careers.html">Careers</a></li>
+                <li class="nav-item"><a class="nav-link" href="careers.html">Careers</a></li>
                 <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
             </ul>
         </div>
     </nav>
 </header>
 
-<!-- Careers Section -->
 <div class="careers-section">
-    <h1>Join Our Team!</h1>
+    <h1>Careers at UNITED INTEGRATED SOFTWARE SOLUTIONS</h1>
 
     <div class="job-listing">
         <h2>Software Developer</h2>
-        <p>We are looking for a skilled software developer.</p>
-        <button onclick="openModal('Software Developer')">Apply Now</button>
+        <p>We are looking for a skilled software developer to join our team.</p>
+        <button onclick="openForm()">Apply Now</button>
     </div>
 
     <div class="job-listing">
         <h2>UI/UX Designer</h2>
-        <p>We need a creative UI/UX Designer.</p>
-        <button onclick="openModal('UI/UX Designer')">Apply Now</button>
+        <p>We are looking for a creative UI/UX Designer.</p>
+        <button onclick="openForm()">Apply Now</button>
+    </div>
+
+    <div class="job-listing">
+        <h2>IoT Engineer</h2>
+        <p>Looking for professionals experienced in IoT development and integration.</p>
+        <button onclick="openForm()">Apply Now</button>
     </div>
 
     <div class="job-listing">
         <h2>VLSI Engineer</h2>
-        <p>Hiring VLSI engineers for chip design.</p>
-        <button onclick="openModal('VLSI Engineer')">Apply Now</button>
+        <p>We are hiring VLSI engineers with experience in chip design and development.</p>
+        <button onclick="openForm()">Apply Now</button>
+    </div>
+
+</div>
+
+<!-- Modal (Static HTML Alternative) -->
+<div id="applyModal" style="display: none;">
+    <div class="modal-content">
+        <h5>Apply for Job</h5>
+        <p>Submit your application via the Google Form link below:</p>
+        <a href="https://forms.gle/YOUR_GOOGLE_FORM_LINK" target="_blank" class="btn btn-success">Apply Now</a>
+        <button onclick="closeForm()">Close</button>
     </div>
 </div>
 
-<!-- Job Application Modal -->
-<div class="modal fade" id="applyModal" tabindex="-1" role="dialog">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title">Apply for <span id="jobTitle"></span></h5>
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-            </div>
-            <div class="modal-body">
-                <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-                    <input type="hidden" name="job_title" id="hiddenJobTitle">
-                    <div class="form-group">
-                        <label for="name">Full Name</label>
-                        <input type="text" class="form-control" id="name" name="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" class="form-control" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="resume">Upload Resume</label>
-                        <input type="file" class="form-control" id="resume" name="resume" accept=".pdf,.doc,.docx" required>
-                    </div>
-                    <button type="submit" class="btn btn-success">Submit Application</button>
-                </form>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Footer -->
 <footer>
     <p>&copy; 2025 UNITED INTEGRATED SOFTWARE SOLUTIONS PVT LTD. All rights reserved.</p>
 </footer>
 
-<!-- JavaScript -->
-<script>
-    function openModal(title) {
-        document.getElementById("jobTitle").textContent = title;
-        document.getElementById("hiddenJobTitle").value = title;
-        $('#applyModal').modal('show');
-    }
-</script>
-
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+    function openForm() {
+        document.getElementById("applyModal").style.display = "block";
+    }
+
+    function closeForm() {
+        document.getElementById("applyModal").style.display = "none";
+    }
+</script>
 
 </body>
 </html>
