@@ -33,7 +33,6 @@
             width: 180px;
             height: auto;
         }
-        /* Adjust logo size for smaller screens */
         @media (max-width: 767px) {
             .navbar-brand img {
                 width: 120px;
@@ -49,20 +48,11 @@
             text-align: center;
             padding: 15px;
         }
-        .contact-info {
-            margin-top: 50px;
-            text-align: center;
-        }
-        .contact-info h4 {
-            margin-bottom: 20px;
-        }
-        .map-container {
-            margin-top: 30px;
-            text-align: center;
-        }
-        .map-container img {
+        .map-container iframe {
+            border: 0;
             width: 100%;
-            height: auto;
+            max-width: 600px;
+            height: 450px;
         }
     </style>
 </head>
@@ -71,7 +61,7 @@
 <header>
     <nav class="navbar navbar-expand-lg navbar-dark">
         <a class="navbar-brand" href="index.html">
-            <img src="assets/images/logo.png" alt="Company Logo">
+            <img src="assets/images/logo.png" alt="Company Logo" style="width: 100px; height: auto;">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
@@ -84,7 +74,7 @@
                 <li class="nav-item"><a class="nav-link" href="technologies.html">Technologies</a></li>
                 <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
                 <li class="nav-item"><a class="nav-link" href="careers.html">Careers</a></li>
-                <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
             </ul>
         </div>        
     </nav>
@@ -110,18 +100,12 @@
         </form>
     </div>
 
-    <div class="contact-info">
-        <h4>Our Office</h4>
-        <p><strong>Address:</strong> Vidya Jyothi Institute of Technology, E Block<br>
-           Aziz Nagar Gate, C.B. Post, Moinabad, Ranga Reddy, Hyderabad, Telangana, India - 500075</p>
-        <p><strong>Email:</strong> contact@unitedsoftware.com</p>
-        <p><strong>Phone:</strong> +91 123 456 7890</p>
-    </div>
-
+    <h3 class="mt-5">Our Location</h3>
     <div class="map-container">
-        <!-- Static Google Map Image (No API Key required) -->
-        <img src="https://maps.googleapis.com/maps/api/staticmap?center=Vidya+Jyothi+Institute+of+Technology,+E+Block,+Aziz+Nagar+Gate,+Hyderabad,+Telangana&zoom=16&size=600x300&markers=Vidya+Jyothi+Institute+of+Technology,+E+Block,+Aziz+Nagar+Gate,+Hyderabad,+Telangana&key=YOUR_GOOGLE_MAPS_API_KEY" alt="Location Map">
-        <p>Map of Vidya Jyothi Institute of Technology, E Block</p>
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1346.457341037546!2d78.32303308217594!3d17.34657199816866!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb957169b6c58f%3A0x827b5a383ea3a4e9!2sECE%20BLOCK%20VJIT!5e0!3m2!1sen!2sin!4v1742144919501!5m2!1sen!2sin" 
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
     </div>
 </div>
 
