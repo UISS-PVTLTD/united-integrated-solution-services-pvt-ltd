@@ -48,11 +48,19 @@
             text-align: center;
             padding: 15px;
         }
+        .map-container {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            transition: transform 0.3s ease;
+        }
         .map-container iframe {
             border: 0;
             width: 100%;
-            max-width: 600px;
-            height: 450px;
+            height: 500px;
+        }
+        .map-container:hover {
+            transform: scale(1.1); /* Enlarge the map when hovered */
         }
     </style>
 </head>
