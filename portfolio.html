@@ -96,16 +96,20 @@
             border: 1px solid #ddd;
             padding: 20px;
             text-align: center;
-            transition: transform 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-radius: 8px;
         }
 
         .portfolio-item:hover {
             transform: translateY(-10px);
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1);
         }
 
         .portfolio-item img {
             max-width: 100%;
             height: auto;
+            border-radius: 8px;
             margin-bottom: 20px;
         }
 
@@ -117,6 +121,7 @@
         .portfolio-item p {
             font-size: 1rem;
             color: #555;
+            margin-bottom: 20px;
         }
 
         .btn-primary {
@@ -159,6 +164,10 @@
             .portfolio-item h3 {
                 font-size: 1.5rem;
             }
+
+            .portfolio-item p {
+                font-size: 0.9rem;
+            }
         }
     </style>
 </head>
@@ -169,7 +178,6 @@
     <nav class="navbar navbar-expand-lg navbar-dark">
         <a class="navbar-brand" href="index.html">
             <img src="assets/images/logo.png" alt="Company Logo" style="width: 100px; height: auto;">
-
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -197,8 +205,8 @@
             <div class="col-md-4">
                 <div class="portfolio-item">
                     <img src="assets/images/project1-thumbnail.jpg" alt="Project 1">
-                    <h3>Project Title</h3>
-                    <p>A brief description of what this project is about and the challenges it addressed.</p>
+                    <h3>Project 1 Title</h3>
+                    <p>A brief description of what this project is about, including the goals and technologies used.</p>
                     <a href="portfolio/project1.html" class="btn btn-primary">View Details</a>
                 </div>
             </div>
@@ -206,8 +214,8 @@
             <div class="col-md-4">
                 <div class="portfolio-item">
                     <img src="assets/images/project2-thumbnail.jpg" alt="Project 2">
-                    <h3>Project Title</h3>
-                    <p>A brief description of what this project is about and the challenges it addressed.</p>
+                    <h3>Project 2 Title</h3>
+                    <p>A brief description of what this project is about, including the challenges it addressed and the solutions provided.</p>
                     <a href="portfolio/project2.html" class="btn btn-primary">View Details</a>
                 </div>
             </div>
@@ -215,8 +223,8 @@
             <div class="col-md-4">
                 <div class="portfolio-item">
                     <img src="assets/images/project3-thumbnail.jpg" alt="Project 3">
-                    <h3>Project Title</h3>
-                    <p>A brief description of what this project is about and the challenges it addressed.</p>
+                    <h3>Project 3 Title</h3>
+                    <p>A brief description of this project, highlighting its impact and any innovative approaches used in its development.</p>
                     <a href="portfolio/project3.html" class="btn btn-primary">View Details</a>
                 </div>
             </div>
