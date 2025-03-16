@@ -87,6 +87,77 @@
         .newsletter-form button:hover {
             background-color: #ffcc00;
         }
+
+        /* Floating Chat Button */
+        .chat-button {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #ff6f61;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            font-size: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        /* Chat Window */
+        .chat-popup {
+            display: none;
+            position: fixed;
+            bottom: 100px;
+            right: 30px;
+            width: 300px;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            padding: 15px;
+            z-index: 1000;
+        }
+
+        .chat-popup.open {
+            display: block;
+        }
+
+        .chat-popup header {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .chat-popup .messages {
+            height: 200px;
+            overflow-y: auto;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+
+        .chat-popup input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .chat-popup button {
+            width: 100%;
+            padding: 10px;
+            background-color: #ff6f61;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            margin-top: 10px;
+        }
+        
+        .chat-popup button:hover {
+            background-color: #ffcc00;
+        }
+
     </style>
 </head>
 <body>
@@ -158,6 +229,19 @@
     </div>
 </div>
 
+<!-- Floating Chat Button -->
+<button class="chat-button" onclick="openChat()">💬</button>
+
+<!-- Chat Popup Window -->
+<div class="chat-popup" id="chatPopup">
+    <header>Customer Support</header>
+    <div class="messages" id="messages">
+        <p><strong>Support:</strong> How can I assist you today?</p>
+    </div>
+    <input type="text" id="chatInput" placeholder="Type your message..." onkeydown="sendMessage(event)">
+    <button onclick="sendMessage()">Send</button>
+</div>
+
 <!-- Footer -->
 <footer>
     <p>&copy; 2025 UNITED INTEGRATED SOFTWARE SOLUTIONS PVT LTD. All rights reserved.</p>
@@ -172,10 +256,37 @@
     </ul>
 </footer>
 
-<!-- JavaScript Libraries -->
-<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+<!-- Bootstrap JS & jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<!-- Custom JS -->
+<script>
+    function openChat() {
+        const chatPopup = document.getElementById('chatPopup');
+        chatPopup.classList.toggle('open');
+    }
+
+    function sendMessage(event) {
+        if (event.key === 'Enter' || event.type === 'click') {
+            const inputField = document.getElementById('chatInput');
+            const messages = document.getElementById('messages');
+            const userMessage = inputField.value.trim();
+
+            if (userMessage) {
+                // Add user message to the chat window
+                messages.innerHTML += `<p><strong>You:</strong> ${userMessage}</p>`;
+
+                // Simulate AI response (can be replaced with actual AI logic)
+                messages.innerHTML += `<p><strong>Support:</strong> I'm here to assist you!</p>`;
+                
+                inputField.value = '';
+                messages.scrollTop = messages.scrollHeight; // Scroll to the bottom
+            }
+        }
+    }
+</script>
 
 </body>
 </html>
