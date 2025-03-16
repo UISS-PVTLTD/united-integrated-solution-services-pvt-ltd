@@ -42,28 +42,39 @@
             margin: auto;
         }
         .job-listing {
-            margin-bottom: 30px;
+            margin-bottom: 20px;
             background-color: #fff;
-            padding: 20px;
+            padding: 15px;
             border-radius: 8px;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .job-listing:hover {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
         }
         .job-listing h2 {
             color: #333;
+            font-size: 1.4rem;
+            margin-bottom: 10px;
         }
-        .job-listing p {
-            font-size: 1.1rem;
+        .job-details {
+            display: none;
+            font-size: 1rem;
             color: #555;
+            margin-top: 10px;
         }
-        .job-listing button {
+        .apply-btn {
             background-color: #ff5722;
             color: white;
             border: none;
-            padding: 10px 15px;
+            padding: 10px;
             border-radius: 5px;
             cursor: pointer;
+            margin-top: 10px;
+            display: inline-block;
         }
-        .job-listing button:hover {
+        .apply-btn:hover {
             background-color: #e64a19;
         }
         footer {
@@ -121,16 +132,30 @@
 <div class="careers-section">
     <h1>Careers at UNITED INTEGRATED SOFTWARE SOLUTIONS</h1>
 
-    <div class="job-listing">
+    <div class="job-listing" onclick="toggleDetails('dev-details')">
         <h2>Software Developer</h2>
-        <p>We are looking for a skilled software developer to join our team.</p>
-        <button data-toggle="modal" data-target="#applyModal">Apply Now</button>
+        <div class="job-details" id="dev-details">
+            <p>Responsibilities:</p>
+            <ul>
+                <li>Develop high-quality software solutions.</li>
+                <li>Collaborate with cross-functional teams.</li>
+                <li>Ensure code quality and performance.</li>
+            </ul>
+            <button class="apply-btn" data-toggle="modal" data-target="#applyModal">Apply Now</button>
+        </div>
     </div>
 
-    <div class="job-listing">
+    <div class="job-listing" onclick="toggleDetails('ux-details')">
         <h2>UI/UX Designer</h2>
-        <p>We are looking for a creative UI/UX Designer.</p>
-        <button data-toggle="modal" data-target="#applyModal">Apply Now</button>
+        <div class="job-details" id="ux-details">
+            <p>Responsibilities:</p>
+            <ul>
+                <li>Create user-friendly interface designs.</li>
+                <li>Work with development teams for implementation.</li>
+                <li>Ensure seamless user experiences.</li>
+            </ul>
+            <button class="apply-btn" data-toggle="modal" data-target="#applyModal">Apply Now</button>
+        </div>
     </div>
 </div>
 
@@ -161,18 +186,12 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 <script>
-    // Update footer year dynamically
     document.getElementById("currentYear").textContent = new Date().getFullYear();
 
-    // Fix GitHub Pages 404 issue (Automatically add repo name in URL)
-    document.addEventListener("DOMContentLoaded", function () {
-        let repoName = window.location.pathname.split("/")[1]; // Get repository name
-        document.querySelectorAll("a.nav-link").forEach(link => {
-            if (!link.href.includes("http")) {
-                link.href = "/" + repoName + "/" + link.getAttribute("href");
-            }
-        });
-    });
+    function toggleDetails(id) {
+        let details = document.getElementById(id);
+        details.style.display = (details.style.display === "block") ? "none" : "block";
+    }
 </script>
 
 </body>
