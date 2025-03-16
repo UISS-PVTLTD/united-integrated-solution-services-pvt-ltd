@@ -3,119 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="UNITED INTEGRATED SOFTWARE SOLUTIONS PVT LTD - Innovative software solutions for your business success.">
-    <meta name="keywords" content="Software Solutions, Technology, IT Services, Business Growth">
-    <meta name="author" content="UNITED INTEGRATED SOFTWARE SOLUTIONS PVT LTD">
-    <title>Home | UNITED INTEGRATED SOFTWARE SOLUTIONS PVT LTD</title>
+    <title>About Us | Company Name</title>
     
     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
     
-    <!-- Font Awesome (For Icons) -->
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="static/css/styles.css">
     
     <style>
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f5f5f5;
+            font-family: Arial, sans-serif;
         }
-        
-        /* Header Styling */
         header {
             background-color: #ff6f61;
             color: white;
             padding: 20px 0;
         }
-
         .navbar {
             background-color: #333;
         }
-
         .navbar a {
             color: white;
-            transition: 0.3s;
         }
-
         .navbar a:hover {
             color: #ffcc00;
         }
-
-        /* Hero Section */
-        .hero-section {
-            position: relative;
-            height: 480px;
-            overflow: hidden;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #000;
+        .about-section {
+            padding: 50px 0;
         }
-
-        .hero-section video {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            filter: brightness(50%);
-        }
-
-        .hero-section .content {
-            position: relative;
-            color: white;
-            text-align: center;
-            z-index: 1;
-            animation: fadeIn 2s ease-in-out;
-        }
-
-        .hero-section h1 {
-            font-size: 3.5rem;
-            font-weight: 700;
-            margin-bottom: 20px;
-        }
-
-        .hero-section p {
-            font-size: 1.2rem;
-            font-weight: 300;
-        }
-
-        /* Footer Styling */
         footer {
             background-color: #333;
             color: white;
             text-align: center;
-            padding: 15px 0;
-        }
-
-        footer p {
-            margin: 0;
-        }
-
-        /* Smooth Scrolling */
-        html {
-            scroll-behavior: smooth;
-        }
-
-        /* Animations */
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        /* Mobile Responsiveness */
-        @media (max-width: 767px) {
-            .hero-section h1 {
-                font-size: 2.5rem;
-            }
-
-            .hero-section p {
-                font-size: 1rem;
-            }
+            padding: 15px;
         }
     </style>
 </head>
@@ -123,10 +44,11 @@
 
 <header>
     <nav class="navbar navbar-expand-lg navbar-dark">
-        <a class="navbar-brand" href="/">
-            <img src="assets/images/logo.png" alt="Company Logo" style="width: 100px; height: auto;">
+        <!-- Logo -->
+        <a class="navbar-brand" href="index.html">
+            <img src="static/images/logo.png" alt="Company Logo" style="width: 100px; height: auto;">
         </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
@@ -144,23 +66,20 @@
     </nav>
 </header>
 
-<div class="hero-section">
-    <video autoplay muted loop>
-        <source src="assets/videos/background-video.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-    <div class="content">
-        <h1>Welcome to</h1>
-        <h1>UNITED INTEGRATED SOFTWARE SOLUTIONS PVT LTD</h1>
-        <p>Your success is our priority.</p>
-    </div>
+<div class="container about-section">
+    <h2>About Company Name</h2>
+    <p>We are a leading company that provides innovative solutions to businesses worldwide. Our mission is to help businesses grow and succeed with cutting-edge technology and a customer-first approach.</p>
+    
+    <h3>Our Vision</h3>
+    <p>Our vision is to be the most trusted partner for businesses, delivering transformative solutions and ensuring long-term success.</p>
 </div>
 
 <footer>
-    <p>&copy; 2025 UNITED INTEGRATED SOFTWARE SOLUTIONS PVT LTD. All rights reserved.</p>
+    <p>&copy; 2025 Company Name. All rights reserved.</p>
 </footer>
 
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<!-- Bootstrap & jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
